@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'img/favicon.png' %}"
+    />
+    <title>{% block title %} {% endblock %}</title>
+    {% block style %}
+    {% endblock %}
+  </head>
+  <body>
+    <div style="margin-left: 30px; margin-bottom: 50px">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/home">
+            <img
+              src="{% static 'img/logo.png' %}"
+              alt="Logo"
+              width="120"
+              height="70"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+          <!-- <a class="navbar-brand" href="#">iBrowseJobs</a> -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- <div style="justify-content: right;"> -->
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0 me-nav-ul">
+              <li class="nav-item me-nav-item">
+                {% if active == "Home" %}
+                <a
+                  class="nav-link active me-active-nav-item"
+                  aria-current="page"
+                  href="/home"
+                  >Home</a
+                >
+                {% else %}
+                <a class="nav-link me-nav-item" aria-current="page" href="/home"
+                  >Home</a
+                >
+                {% endif %}
+              </li>
+              <li class="nav-item me-nav-item">
+                {% if active == "Courses" %}
+                <a
+                  class="nav-link active me-active-nav-item"
+                  aria-current="page"
+                  href="/courses"
+                  >Courses</a
+                >
+                {% else %}
+                <a
+                  class="nav-link me-nav-item"
+                  aria-current="page"
+                  href="/courses"
+                  >Courses</a
+                >
+                {% endif %}
+              </li>
+              <li class="nav-item me-nav-item">
+                {% if active == "Contact Us" %}
+                <a
+                  class="nav-link active me-active-nav-item"
+                  aria-current="page"
+                  href="/contact-us"
+                  >Contact Us</a
+                >
+                {% else %}
+                <a class="nav-link me-nav-item" aria-current="page" href="/contact-us"
+                  >Contact Us</a
+                >
+                {% endif %}
+              </li>
+              <li class="nav-item me-nav-item">
+                {% if active == "Digital Services" %}
+                <a
+                  class="nav-link active me-active-nav-item"
+                  aria-current="page"
+                  href="/digital-services"
+                  >Digital Services</a
+                >
+                {% else %}
+                <a class="nav-link me-nav-item" aria-current="page" href="/digital-services"
+                  >Digital Services</a
+                >
+                {% endif %}
+              </li>
+              {% if is_logged_in == True %}
+              <li class="nav-item dropdown me-nav-item">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  My Account
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item me-nav-dropdown-item" href="#"
+                      >My Courses</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item me-nav-dropdown-item" href="#"
+                      >My Profile</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item me-nav-dropdown-item" href="#"
+                      >Logout</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              {% else %}
+              <li class="nav-item me-nav-item">
+                {% if active == "Sign Up" %}
+                <a
+                  class="nav-link active me-active-nav-item"
+                  aria-current="page"
+                  href="/sign-up"
+                  >Sign Up</a
+                >
+                {% else %}
+                <a class="nav-link me-nav-item" aria-current="page" href="/sign-up"
+                  >Sign Up</a
+                >
+                {% endif %}
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+          <!-- </div> -->
+        </div>
+      </nav>
+    </div>
+    {% block content %} {% endblock %}
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  </body>
+</html>

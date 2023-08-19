@@ -1,0 +1,82 @@
+References:
+https://www.mckinsey.com/
+https://blackrock.com/
+https://www.scaler.com/courses/data-structures-and-algorithms/?utm_source=ads&utm_medium=googlesearch&utm_campaign=perf_scaler_academy_ads_googlesearch_brand-search_india_all&utm_content=e-scaler&utm_term=scaler&param1=562296081078&param2=c&param3=&gad=1&gclid=CjwKCAjw5_GmBhBIEiwA5QSMxC1-DB7IPd2rKCEafkH8-x-FvZ8ylgBiHvIL93dm2Qhx0wIRHzo20hoCyjAQAvD_BwE
+(landing page for curriculum)
+
+Color pallete:
+yellow
+gray
+white
+blue
+
+1. Home page -> Menu card webpage
+	- digital services
+		- business
+	- upskilling and deployment	
+		- on click -> course details
+			- paid and free sep
+		- leaderboard on top performers in course
+	- mock interviews (browsejobs.com)
+		- pics of govt jobs (clickable)
+		- police interviews
+
+2. TedEx events page
+
+-------------------------------------------------------
+
+Webpage Design: Menu Card Webpage
+
+Color Palette:
+
+Yellow (Primary)
+Gray (Secondary)
+White (Background)
+Blue (Accent)
+Header:
+
+Use a yellow background for the header.
+Place the website logo at the top-left corner.
+Create a navigation menu with clear and elegant typography, aligned horizontally on the header.
+Navigation menu options: Home, Digital Services, Upskilling, Mock Interviews.
+Hero Section:
+
+Implement a large banner image that visually represents the website's theme.
+Overlay the banner image with a semi-transparent yellow overlay to create contrast and enhance the text readability.
+Display a captivating headline and a subheadline welcoming users to the website's offerings.
+Digital Services Section:
+
+Use a white background for this section.
+Divide the section into two columns.
+In the left column, use a gray accent to highlight the section title "Digital Services."
+In the right column, provide a brief description of the digital services offered to businesses.
+Incorporate high-quality icons or images to visually represent each service.
+Upskilling and Deployment Section:
+
+Use a gray background for this section.
+Divide the section into two columns.
+In the left column, use a yellow accent to highlight the section title "Upskilling and Deployment."
+In the right column, provide a short introduction to the upskilling and deployment services.
+Include a "Learn More" button that smoothly expands the section to reveal more details about the courses offered, both paid and free. Include course titles, descriptions, and links.
+Mock Interviews Section:
+
+Use a white background for this section.
+Incorporate a compelling image that depicts a mock interview scenario.
+On the right side of the image, provide an introduction to the mock interview services.
+Include a visually appealing "Get Started" button that directs users to the mock interview services page on browsejobs.com.
+Footer:
+
+Utilize a gray background for the footer.
+Include multiple columns for organizing footer content.
+In one column, place important links like Home, Digital Services, Upskilling, and Mock Interviews.
+In another column, add contact information, including an email address and phone number.
+Integrate social media icons that link to the website's social profiles.
+Add a copyright notice along with the current year.
+Overall Design Guidelines:
+
+Maintain a clean, modern, and professional design with consistent typography and spacing.
+Utilize ample white space to enhance readability and visual appeal.
+Incorporate high-quality images that resonate with the website's services.
+Ensure a responsive design that adapts seamlessly to various screen sizes.
+Implement subtle animations or transitions to enhance the user experience.
+Please note that this outline provides a conceptual framework for the webpage design. You would need to collaborate with a skilled web developer or use a website builder to implement this design effectively.
