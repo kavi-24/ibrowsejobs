@@ -4,15 +4,16 @@ from django.db import models
 class Student(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
-    email = models.EmailField(max_length=40)
+    email = models.EmailField(max_length=40, unique=True)
     password = models.CharField(max_length=50)
 
 class UsedCoupons(models.Model):
     student = models.ForeignKey(Student, on_delete=models.DO_NOTHING)
-    coupon_code = models.CharField(max_length=50)
+    coupon_code = models.CharField(max_length=50, unique=True)
 
 
 class Course(models.Model):
+    course_code = models.CharField(max_length=20, unique=True, default="0")
     course_name = models.CharField(max_length=100)
     course_desc = models.CharField(max_length=200)
     created_on = models.DateField()  # YYYY-MM-DD
