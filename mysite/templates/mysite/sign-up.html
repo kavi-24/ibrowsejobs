@@ -1,21 +1,24 @@
 {% extends 'mysite/base.html' %} {% load static %} {% block title %} iBrowseJobs
 {% endblock %} {% block style %}
 <style>
+  @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
   body {
+    font-family: Arial, sans-serif;
     margin-left: 10%;
     margin-right: 10%;
     padding: 0;
-    font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-size: 15px;
     line-height: 1.7;
+    color: #c4c3ca;
     overflow-x: hidden;
   }
 
-  .container {
+  /*.container {
     display: flex;
     justify-content: space-between;
-  }
+    padding: 20px;
+  }*/
 
   .me-nav-item {
     font-size: 20px;
@@ -35,8 +38,6 @@
     /* space between navbar button links */
     margin-right: 20px;
   }
-
-  @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
 
   a {
     cursor: pointer;
@@ -115,9 +116,9 @@
 
   .card-3d-wrap {
     position: relative;
-    width: 450px;
+    width: 440px;
     max-width: 100%;
-    height: 450px;
+    height: 400px;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     perspective: 800px;
@@ -125,7 +126,7 @@
   }
   .card-3d-wrapper {
     width: 100%;
-    height: 120%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -137,7 +138,7 @@
   .card-back {
     width: 100%;
     height: 100%;
-    background-color: #565769;
+    background-color: #2a2b38;
     background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg");
     background-position: bottom center;
     background-repeat: no-repeat;
@@ -313,117 +314,4 @@
   }
 </style>
 {% endblock %} {% block content %}
-<div class="section">
-  <div class="container" style="margin-left: auto; margin-right: auto">
-    <div class="full-height">
-      <div class="col-12 text-center align-self-center py-5">
-        <div class="section pb-5 pt-5 pt-sm-2 text-center">
-          <h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
-          <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
-          <label for="reg-log"></label>
-          <div class="card-3d-wrap mx-auto">
-            <div class="card-3d-wrapper">
-              <div class="card-front">
-                <div class="center-wrap">
-                  <div class="section text-center">
-                    <h4 class="mb-4 pb-3">Log In</h4>
-                    <div class="form-group">
-                      <input
-                        type="email"
-                        name="logemail"
-                        class="form-style"
-                        placeholder="Email"
-                        id="logemail"
-                        autocomplete="off"
-                      />
-                      <i class="input-icon uil uil-at"></i>
-                    </div>
-                    <div class="form-group mt-2">
-                      <input
-                        type="password"
-                        name="logpass"
-                        class="form-style"
-                        placeholder="Password"
-                        id="logpass"
-                        autocomplete="off"
-                      />
-                      <i class="input-icon uil uil-lock-alt"></i>
-                    </div>
-                    <a href="#" class="btn mt-4">submit</a>
-                    <p class="mb-0 mt-4 text-center">
-                      <a href="#0" class="link">Forgot password?</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="card-back">
-                <div class="center-wrap">
-                  <div class="section text-center">
-                    <h4 class="mb-4 pb-3">Sign Up</h4>
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        name="firstname"
-                        class="form-style"
-                        placeholder="First Name"
-                        id="firstname"
-                        autocomplete="off"
-                      />
-                      <i class="input-icon uil uil-user"></i>
-                    </div>
-                    <div class="form-group mt-2">
-                      <input
-                        type="text"
-                        name="lastname"
-                        class="form-style"
-                        placeholder="Last Name"
-                        id="lastname"
-                        autocomplete="off"
-                      />
-                      <i class="input-icon uil uil-user"></i>
-                    </div>
-                    <div class="form-group mt-2">
-                      <input
-                        type="email"
-                        name="logemail"
-                        class="form-style"
-                        placeholder="Email"
-                        id="logemail"
-                        autocomplete="off"
-                      />
-                      <i class="input-icon uil uil-at"></i>
-                    </div>
-                    <div class="form-group mt-2">
-                      <input
-                        type="password"
-                        name="logpass"
-                        class="form-style"
-                        placeholder="Password"
-                        id="logpass"
-                        autocomplete="off"
-                      />
-                      <i class="input-icon uil uil-lock-alt"></i>
-                    </div>
-                    <div class="form-group mt-2">
-                      <input
-                        type="password"
-                        name="confirmpassword"
-                        class="form-style"
-                        placeholder="Confirm Password"
-                        id="confirmpassword"
-                        autocomplete="off"
-                      />
-                      <i class="input-icon uil uil-lock-alt"></i>
-                    </div>
-                    <a href="#" class="btn mt-4">submit</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 {% endblock %}
