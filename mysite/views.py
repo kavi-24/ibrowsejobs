@@ -16,7 +16,7 @@ def digital_services(request):
     return render(request, 'mysite/digital-services.html', context={"active": "Digital Services", "is_logged_in": True})
 
 def sign_up(request):
-    return render(request, 'mysite/sign-up.html', context={"active": "Sign Up", "is_logged_in": False})
+    return render(request, 'mysite/login-signup.html', context={"active": "Login Signup", "is_logged_in": False})
 
 def profile(request):
     return render(request, 'mysite/profile.html', context={"active": "Profile", "is_logged_in": True})

@@ -61,6 +61,7 @@
     font-weight: 600;
   }
   h6 span {
+    color: #102770;
     padding: 0 20px;
     text-transform: uppercase;
     font-weight: 700;
@@ -91,7 +92,24 @@
     cursor: pointer;
     background-color: #ffeba7;
   }
-  .checkbox:checked + label:before,
+  .checkbox:checked + label:before {
+    position: absolute;
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: #ffeba7;
+    background-color: #102770;
+    font-family: "unicons";
+    content: "S";
+    z-index: 20;
+    top: -10px;
+    left: -10px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 24px;
+    transition: all 0.5s ease;
+  }
   .checkbox:not(:checked) + label:before {
     position: absolute;
     display: block;
@@ -101,7 +119,7 @@
     color: #ffeba7;
     background-color: #102770;
     font-family: "unicons";
-    content: "\eb4f";
+    content: "L";
     z-index: 20;
     top: -10px;
     left: -10px;
@@ -111,7 +129,7 @@
     transition: all 0.5s ease;
   }
   .checkbox:checked + label:before {
-    transform: translateX(44px) rotate(-270deg);
+    transform: translateX(44px) rotate(360deg);
   }
 
   .card-3d-wrap {
@@ -317,11 +335,11 @@
 
 <div class="section">
   <div class="container">
-    <div class="row full-height justify-content-center">
+    <div class="row justify-content-center">
       <div class="col-12 text-center align-self-center py-5">
         <div class="section pb-5 pt-5 pt-sm-2 text-center">
           <h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
-          <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
+          <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
           <label for="reg-log"></label>
           <div class="card-3d-wrap mx-auto">
             <div class="card-3d-wrapper">
@@ -387,10 +405,10 @@
                     <div class="form-group mt-2">
                       <input
                         type="email"
-                        name="logemail"
+                        name="signupemail"
                         class="form-style"
                         placeholder="Email"
-                        id="logemail"
+                        id="signupemail"
                         autocomplete="off"
                       />
                       <i class="input-icon uil uil-at"></i>
@@ -405,7 +423,6 @@
                         autocomplete="off"
                       />
                       <i class="input-icon uil uil-lock-alt"></i>
-                      <!-- <input type="checkbox" onclick="toggleVisibility()"/>Show Password</br> -->
                     </div>
                     <a href="#" class="btn mt-4">submit</a>
                   </div>
@@ -418,14 +435,4 @@
     </div>
   </div>
 </div>
-<!-- <script>  
-  function toggleVisibility() {  
-    var getPasword = document.getElementById("password");  
-    if (getPasword.type === "password") {  
-      getPasword.type = "text";  
-    } else {  
-      getPasword.type = "password";
-    }  
-  }  
-  </script>  -->
 {% endblock %}
